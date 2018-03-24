@@ -1,0 +1,238 @@
+% resume.tex
+% vim:set ft=tex spell:
+
+\documentclass[10pt,letterpaper]{article}
+\usepackage[letterpaper,margin=0.75in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{mdwlist}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage{tgpagella}
+\usepackage{hyperref}
+\usepackage{fontawesome}
+\pagestyle{empty}
+\setlength{\tabcolsep}{0em}
+\raggedbottom
+\raggedright
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=grey,
+}
+
+
+
+\newcommand{\area}[2]{\textbf{#1:}   #2}
+\newcommand{\lineunder}{\vspace*{-8pt} \\ \hspace*{-18pt} \hrulefill \\}
+\newcommand{\header}[1]{{\hspace*{-15pt}\vspace*{6pt} \textsc{#1}} \vspace*{-6pt} \lineunder}
+\newcommand{\employer}[3]{{ \textbf{#1} (#2)\\ \underline{\textbf{\emph{#3}}}\\  }}
+\newcommand{\contact}[3]{
+\vspace*{-8pt}
+\begin{center}
+{\LARGE \scshape {#1}}\\
+#2 \lineunder 
+#3
+\end{center}
+\vspace*{-8pt}
+}
+\newenvironment{achievements}{\begin{list}{$\bullet$}{\topsep 0pt \itemsep -2pt}}{\vspace*{4pt}\end{list}}
+
+
+
+
+% indentsection style, used for sections that aren't already in lists
+% that need indentation to the level of all text in the document
+\newenvironment{indentsection}[1]%
+{\begin{list}{}%
+	{\setlength{\leftmargin}{#1}}%
+	\item[]%
+}
+{\end{list}}
+
+% opposite of above; bump a section back toward the left margin
+\newenvironment{unindentsection}[1]%
+{\begin{list}{}%
+	{\setlength{\leftmargin}{-0.5#1}}%
+	\item[]%
+}
+{\end{list}}
+
+% format two pieces of text, one left aligned and one right aligned
+\newcommand{\headerrow}[2]
+{\begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r}
+	#1 &
+	#2 \\
+\end{tabular*}}
+
+% make "C++" look pretty when used in text by touching up the plus signs
+\newcommand{\CPP}
+{C\nolinebreak[4]\hspace{-.05em}\raisebox{.22ex}{\footnotesize\bf ++}}
+
+\newcommand{\education}[5]{
+	\headerrow
+		{\textbf{#1}}
+		{\textbf{#2}}
+	\\
+	\headerrow
+		{\emph{#3}}
+		{\emph{#4}}
+	\begin{itemize*}
+		\item #5
+	\end{itemize*}
+}
+
+\newcommand{\employment}[5]{
+	\headerrow
+		{\textbf{#1}}
+		{\textbf{#2}}
+	\\
+	\headerrow
+		{\emph{#3}}
+		{\emph{#4}}
+	\begin{itemize*}
+		\item #5
+	\end{itemize*}
+}
+
+
+
+% and the actual content starts here
+\begin{document}
+\small
+\smallskip
+\vspace*{-30pt}
+
+\contact{Jason Bowman}
+{San Francisco, CA}
+{\faPhone \hspace{0.1em} (205) 202-9668 \hspace{0.1em} \faEnvelope \hspace{0.1em}
+  \href{mailto:sinistar@gmail.com}{sinistar@gmail.com} \hspace{0.1em} \faGithub \hspace{0.1em} \href{https://www.github.com/sini}{sini} \hspace{0.1em} \faTwitter
+  \hspace{0.1em} \href{https://www.twitter.com/sinistar}{sinistar} \hspace{0.1em} \faLinkedin \hspace{0.1em}
+  \href{https://linkedin.com/in/sinistar}{sinistar}}
+
+\vspace*{3pt}
+
+\header{Education}
+\education{The University of Alabama}{Tuscaloosa, AL}{Masters of Science in
+  Computer Science (MSc), College of Engineering}{December 2012}{\area{Select
+    Coursework}{Security $\cdot$ Cryptography $\cdot$ Advanced Computer
+    Networking $\cdot$ Cloud Computing $\cdot$ Compilers}}
+
+%\education{The University of Alabama}{Tuscaloosa, AL}{Bachelors of Science in Computer Science (BSc), College of Engineering}
+%{May 2011}{Minor in Mathematics}
+
+\vspace*{3pt}
+
+\header{Skills}
+\begin{itemize*}
+\item Proficient in application development with Java (Spring/Servlets), Scala, C/\CPP, Ruby, Python, and Unix Shell Scripting.
+\item Experience with network programming, virtualization, elastic computing, database design, MVC web frameworks, RESTful APIs, fault tolerance and high availability, performance monitoring and automated remediation.
+\item Experience managing and architechting applications with AMQP, Redis/Memcached, Nagios/Sensu, Zookeeper, Hyrstrix, HBase, ElasticSearch, Graphite, Tomcat/Jetty.
+\item Experience building Continuous Integration systems, build management, and artifact lifecycle management. Tools: Chef, Git (git-flow), Jenkins, Nexus, Maven, SBT, etc.
+\item Over 17 years experience with GNU/Linux and other UNIX platforms.
+\item Team managment and organizational leadership experience. Acted as Scrum Master in agile environments.
+\end{itemize*}
+\vspace*{3pt}
+
+\header{Related Experience}
+\employment{UBER Technologies}{San Francisco, CA}{Software Engineer}{January 2015 - Present}{
+Platform Engineering - Embedded with Data team (Jan 2015-Dec 2015)
+  \item Initially embedded with the Vertica Data Warehouse team
+  \item Scaled data warehouse from 1 cluster of 8 vertica nodes to 8 clusters of 32 nodes spanning multiple datacenters.
+  \item Built tools for data replication, ETL, and cluster management.
+  \item Built query analysis tools to gate poorly performing queries.
+  \item Deployed and managed UBER’s first Hadoop ecosystem, initially a mere 500TiB.
+  \item Designed architectures to ensure data security and integrity, as well as compliance with local regulations, as we expanded data centers and entered new regions such as China, India, and Russia. Participated in initial data center bootstrapping for data infrastructure.
+\item [Solo Project] uServer
+  \item A service for self-service hardware provisioning, eventually adopted company wide to provision 100’s of thousands of bare-metal hosts.
+  \item Data made up more than 30\% of UBER’s hardware footprint; it was clear that manual/scripted provisioning was not going to be sustainable.
+  \item Provided extensive documentation so project could be transferred to Tech Ops team for long term support and maintenance.
+
+\item Site Reliability Engineering - Streaming SRE (Dec 2015 - Oct 2016)
+  \item Assigned senior engineer role on the the newly formed Streaming SRE team. 
+  \item Defined team OKRs and KPIs; mentored several junior engineers.
+  \item Scaled capacity from zero to > 1000 brokers, processing at rates > 500GiB/s.
+  \item [Solo Project] Kafka Intelligent Transformation Tool (K.I.T.T) 
+    \item Modified Kafka controller to optimally redistribute partition assignments.
+    \item Mathematical models provide a near optimal solution (NP Hard), able to rebalance brokers to within a standard deviation of 0.0001%.
+    \item Automatic cluster expansion, on-line data rebalancing, and contraction when a broker fails, features not supported by open source Kafka.
+    \item Visualization tools to understand failure cases and intra-broker affinities.
+  \item [Solo Project] Kafka Performance Optimization
+    \item Tuned Broker configs, JVM settings, Linux kernel and filesystem, and hardware RAID controllers. Modified broker net and disk I/O code.
+    \item Achieved an increase in maximum broker throughput of >500\% over default configuration, and a 5000\% decrease in p99 latencies up to that threshold.
+    \item Outcome: A reduction in hardware requirements reducing our operational costs by several hundred million dollars.
+    \item Promotions - Backend Software Engineer (Nov 2016-Feb 2017)
+    \item Transferred to marketplace engineering to work with end-user facing products. 
+    \item Oversaw all-active data re-architecture and migration.
+    \item Built auditing tools for post-transaction analysis of user promotions and execute automatic remediation in the event any real-time systems failed.
+    \item Fare Integrity - Backend Software Engineer (Feb 2017 - Present)
+    \item Lead backend engineer on the newly formed Fare Integrity team.
+  \item [Project Lead] Pricing Integrity Engine
+    \item An abstract platform for validating user defined business requirements.
+    \item Write a validation rule once and run in multiple runtimes; real-time (RPC), streaming (Kafka/Samza), and batch (Spark/HIVE).
+    \item Detected numerous violations, worked with other internal teams to identify root causes and resolve technical issues; coordinated with business to make sure Riders and Drivers were correctly notified and compensated.
+}
+\employment{Rocket Lawyer}{San Francisco, CA}{Senior Systems Engineer (original
+  title: Systems Engineer)}{January 2013 - January 2015}{
+Designed service infrastructure and provided 24/7 on-call support for a high volume ecommerce site in the legal services sector, running primarily on the JVM and a legacy .NET platform.
+\item Application performance analysis and optimization tuning of both application services (jvm flags, hystrix thread-pool size, etc) and supporting infrastructure services (apache, redis, elasticsearch, linux kernel options, etc).
+\item Extended application code (Java/Scala) to expose internal health checks, endpoint timings and metrics collection, and improved logging. Assisted with the design and implementation of dynamic service discovery and reconfiguration via zookeeper.
+\item Built tool chains for continuous integration, automated dynamic reconfiguration, deployment, monitoring, and automated incident remediation of thousands of service instances spanning multiple OS platforms, datacenters, and environments.
+\item Developed internal tools for code visualization, client-service dependendency graphs and version drift, for a distributed services architecture of 50+ services built from a shared core. Operations dashboards of metric and log visualization tools built on top of hystrix, graphite, and logstash.
+}
+
+\employment{nine.is}{Tuscaloosa, AL}{Software Engineer / Web Developer}{Jan 2012 - Dec 2012}{
+Development and maintenance of multiple existing and new projects for this small design company in a several languages and frameworks including PHP, JavaScript, and Ruby on Rails.
+\item Built and led a team of junior engineers to transition nine.is from an
+  outsource/contract based operation to doing their own in-house software development.
+}
+
+% TODO: Reduce to three or four bullets
+% hilights: kernel development/active tuning, GENI research, DTN, video streaming
+\employment{The University of Alabama}{Tuscaloosa, AL}{Graduate Research Assistant}{Jan 2010 - Dec 2012}{
+Research on proactive and adaptive techniques for cross-layer network
+reconfiguration in an effort to achieve optimal performance even when a network
+is under load or attack by hostile actors. Project details subject to export control restrictions.
+\item Worked with the Linux kernel network stack, defining a custom TCP variant
+  routing protocol, and physical device driver modification for fine parameter tuning and performance analysis.
+%\item Application development and implementation of an autonomous cross-layer networking scheme utilizing C, Python, and Java, and an adaptive video streaming client application utilizing Java and gstreamer.
+%\item Design and implementation of a universal description language for robots and their capabilities to further development of a deterministic universal device driver for most robots.
+%\item Research on automated auditing, analysis, and penetration testing of virtual machine images for use in cloud computing - an extension of my work on GENI.
+\item Security analysis and architecture design for GENI, a global network
+  research test-bed for developing new internet routing technologies.
+%\item Experimentation with Delay Tolerant Networks, optimizing cost in low connectivity environments with throwboxes.
+%\item Opportunistic Network Environment (ONE) Simulator - Extended the simulation environment to support simple throwbox placement and management with geographical mapping tools. Implemented, modified, and experimented with multiple DTN protocols.
+}
+
+%\employment{The University of Alabama}{Tuscaloosa, AL}{Graduate Research Assistant}{June 2011 - December 2012}{
+%Research on proactive and adaptive techniques for cross-layer network reconfiguration in an effort to achieve optimal performance even when a network is under load or attack.
+%\item Worked with the Linux kernel network stack, routing protocols, and physical device drivers for fine parameter tuning and performance analysis.
+%\item Application development and implementation of an autonomous cross-layer networking scheme utilizing C, Python, and Java, and an adaptive video streaming client application utilizing Java and gstreamer.
+%\item Design and implementation of a universal description language for robots and their capabilities to further development of a deterministic universal device driver for most robots.
+%\item Research on automated auditing, analysis, and penetration testing of virtual machine images for use in cloud computing - an extension of my work on GENI.
+%}
+
+%\employment{The University of Alabama}{Tuscaloosa, AL}{Undergraduate Research Assistant (NSF)}{2010 - 2011}{
+%Security analysis and architecture design for GENI, a network research testbed for developing internet technologies.
+%\item Experimentation with Delay Tolerant Networks, optimizing cost in low connectivity environments with throwboxes.
+%\item Opportunistic Network Environment (ONE) Simulator - Extended the simulation environment to support simple throwbox placement and management with geographical mapping tools. Implemented, modified, and experimented with multiple DTN protocols.
+%}
+
+%\employment{Brewer Porch Children's Center}{Tuscaloosa, AL}{Unix Systems Administrator}{2004-2006}{
+%Managed numerous services including samba, mail, file, billing, print, web, and applications servers running on Linux, Solaris, and Microsoft Server systems.
+%Maintained strict networking and client security policies in compliance with HIPAA regulations.
+%\item Developed custom web applications for organizational management and document processing.
+%\item Maintenance, repair, and installations of Mac, Unix, and PC workstations.
+%}
+\vspace*{3pt}
+\header{Publications}
+\begin{itemize*}
+\item Dawei Li, Xiaoyan Hong, Jason Bowman "Evaluation of Security Vulnerabilities by Using ProtoGENI as a Launchpad", IEEE Globecom 2011, Houston, USA, Dec. 2011.
+\item M. Anderson, P. Kilgo, and J. Bowman. "RDIS: Generalizing domain concepts to specify device to framework mappings." In International Conference on Robotics and Automation, 2012. http://ua-robotics.net/index.php?title=RDIS
+\end{itemize*}
+\vspace*{8pt}
+
+	
+\end{document}
