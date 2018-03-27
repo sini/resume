@@ -127,18 +127,22 @@
 
 \header{Skills}
 \begin{itemize*}
-\item Proficient in application development with Java (Spring/Servlets), Scala, C/\CPP, Ruby, Python, and Unix Shell Scripting.
-\item Experience with network programming, virtualization, elastic computing, database design, MVC web frameworks, RESTful APIs, fault tolerance and high availability, performance monitoring and automated remediation.
-\item Experience managing and architechting applications with AMQP, Redis/Memcached, Nagios/Sensu, Zookeeper, Hyrstrix, HBase, ElasticSearch, Graphite, Tomcat/Jetty.
-\item Experience building Continuous Integration systems, build management, and artifact lifecycle management. Tools: Chef, Git (git-flow), Jenkins, Nexus, Maven, SBT, etc.
-\item Over 17 years experience with GNU/Linux and other UNIX platforms.
-\item Team managment and organizational leadership experience. Acted as Scrum Master in agile environments.
+\item Proficient in application development with Scala, Java, Python, Go, C/\CPP, Ruby, and UNIX shell scripting. 
+\item Experience with distributed systems, streaming data processing, security auditing, elastic
+  computing, API design, performance optimization, graceful error detection and
+  fault recovery, and full stack application development.
+\item Experience architecting, scaling, and optimizing high volume QPS applications in hyper-growth environments.
+\item Experience building developer experience tools, continuous integration
+  systems, and production infrastructure services.
+\item Over 20 years experience with GNU/Linux and other UNIX platforms.
+\item Technical project management and organizational leadership experience.
 \end{itemize*}
 \vspace*{3pt}
 
 \header{Related Experience}
-\employment{UBER Technologies}{San Francisco, CA}{Software Engineer}{January 2015 - Present}{
+\employment{UBER Technologies, Inc}{San Francisco, CA}{Software Engineer}{January 2015 - Present}{
 Platform Engineering - Embedded with Data team (Jan 2015-Dec 2015)
+\begin{itemize*}
   \item Initially embedded with the Vertica Data Warehouse team
   \item Scaled data warehouse from 1 cluster of 8 vertica nodes to 8 clusters of 32 nodes spanning multiple datacenters.
   \item Built tools for data replication, ETL, and cluster management.
@@ -150,7 +154,9 @@ Platform Engineering - Embedded with Data team (Jan 2015-Dec 2015)
   \item Data made up more than 30\% of UBER’s hardware footprint; it was clear that manual/scripted provisioning was not going to be sustainable.
   \item Provided extensive documentation so project could be transferred to Tech Ops team for long term support and maintenance.
 
+\end{itemize*}
 \item Site Reliability Engineering - Streaming SRE (Dec 2015 - Oct 2016)
+\begin{itemize*}
   \item Assigned senior engineer role on the the newly formed Streaming SRE team. 
   \item Defined team OKRs and KPIs; mentored several junior engineers.
   \item Scaled capacity from zero to > 1000 brokers, processing at rates > 500GiB/s.
@@ -163,11 +169,12 @@ Platform Engineering - Embedded with Data team (Jan 2015-Dec 2015)
     \item Tuned Broker configs, JVM settings, Linux kernel and filesystem, and hardware RAID controllers. Modified broker net and disk I/O code.
     \item Achieved an increase in maximum broker throughput of >500\% over default configuration, and a 5000\% decrease in p99 latencies up to that threshold.
     \item Outcome: A reduction in hardware requirements reducing our operational costs by several hundred million dollars.
-    \item Promotions - Backend Software Engineer (Nov 2016-Feb 2017)
+\end{itemize*}
+\item Promotions - Backend Software Engineer (Nov 2016-Feb 2017)
     \item Transferred to marketplace engineering to work with end-user facing products. 
     \item Oversaw all-active data re-architecture and migration.
     \item Built auditing tools for post-transaction analysis of user promotions and execute automatic remediation in the event any real-time systems failed.
-    \item Fare Integrity - Backend Software Engineer (Feb 2017 - Present)
+\item Fare Integrity - Backend Software Engineer (Feb 2017 - Present)
     \item Lead backend engineer on the newly formed Fare Integrity team.
   \item [Project Lead] Pricing Integrity Engine
     \item An abstract platform for validating user defined business requirements.
@@ -176,17 +183,24 @@ Platform Engineering - Embedded with Data team (Jan 2015-Dec 2015)
 }
 \employment{Rocket Lawyer}{San Francisco, CA}{Senior Systems Engineer (original
   title: Systems Engineer)}{January 2013 - January 2015}{
-Designed service infrastructure and provided 24/7 on-call support for a high volume ecommerce site in the legal services sector, running primarily on the JVM and a legacy .NET platform.
-\item Application performance analysis and optimization tuning of both application services (jvm flags, hystrix thread-pool size, etc) and supporting infrastructure services (apache, redis, elasticsearch, linux kernel options, etc).
-\item Extended application code (Java/Scala) to expose internal health checks, endpoint timings and metrics collection, and improved logging. Assisted with the design and implementation of dynamic service discovery and reconfiguration via zookeeper.
-\item Built tool chains for continuous integration, automated dynamic reconfiguration, deployment, monitoring, and automated incident remediation of thousands of service instances spanning multiple OS platforms, datacenters, and environments.
-\item Developed internal tools for code visualization, client-service dependendency graphs and version drift, for a distributed services architecture of 50+ services built from a shared core. Operations dashboards of metric and log visualization tools built on top of hystrix, graphite, and logstash.
+Designed service infrastructure and provided 24/7 on-call support for a high
+volume e-commerce site in the legal services sector, running primarily on the
+JVM and a legacy .NET platform. Improved site reliability from 99\% uptime to 99.99\%
+and reduced p99 latencies from 2000ms to 150ms.
+\item Performance analysis and optimization of application services and supporting infrastructure services.
+\item Extended application code to expose internal application
+  state, key performance metrics, enrich logging, and reduce overall latencies.
+  Implemented dynamic service discovery and reconfiguration via ZooKeeper.
+\item Built tooling for continuous integration, dynamic configuration
+  management, deployment management, monitoring, and automated incident
+  detection and remediation.
+% \item Developed internal tools for code visualization, client-service dependendency graphs and version drift, for a distributed services architecture of 50+ services built from a shared core. Operations dashboards of metric and log visualization tools built on top of hystrix, graphite, and logstash.
 }
 
 \employment{nine.is}{Tuscaloosa, AL}{Software Engineer / Web Developer}{Jan 2012 - Dec 2012}{
 Development and maintenance of multiple existing and new projects for this small design company in a several languages and frameworks including PHP, JavaScript, and Ruby on Rails.
 \item Built and led a team of junior engineers to transition nine.is from an
-  outsource/contract based operation to doing their own in-house software development.
+  outsource contract based operation to doing their own in-house software development.
 }
 
 % TODO: Reduce to three or four bullets
@@ -220,12 +234,12 @@ is under load or attack by hostile actors. Project details subject to export con
 %\item Opportunistic Network Environment (ONE) Simulator - Extended the simulation environment to support simple throwbox placement and management with geographical mapping tools. Implemented, modified, and experimented with multiple DTN protocols.
 %}
 
-%\employment{Brewer Porch Children's Center}{Tuscaloosa, AL}{Unix Systems Administrator}{2004-2006}{
-%Managed numerous services including samba, mail, file, billing, print, web, and applications servers running on Linux, Solaris, and Microsoft Server systems.
-%Maintained strict networking and client security policies in compliance with HIPAA regulations.
-%\item Developed custom web applications for organizational management and document processing.
+\employment{Brewer Porch Children's Center}{Tuscaloosa, AL}{Unix Systems Administrator}{2004-2006}{
+Managed numerous services including samba, mail, file, billing, print, web, and applications servers running on Linux, Solaris, and Microsoft Server systems.
+\item Maintained strict networking and client security policies in compliance with HIPAA regulations.
+\item Developed custom applications for internal organization management and patient document processing.
 %\item Maintenance, repair, and installations of Mac, Unix, and PC workstations.
-%}
+}
 \vspace*{3pt}
 \header{Publications}
 \begin{itemize*}
