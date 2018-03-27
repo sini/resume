@@ -79,9 +79,7 @@
 	\headerrow
 		{\emph{#3}}
 		{\emph{#4}}
-	\begin{itemize*}
-		\item #5
-	\end{itemize*}
+    #5
 }
 
 \newcommand{\employment}[5]{
@@ -116,16 +114,25 @@
 
 \header{Education}
 \education{The University of Alabama}{Tuscaloosa, AL}{Masters of Science in
-  Computer Science (MSc), College of Engineering}{December 2012}{\area{Select
-    Coursework}{Security $\cdot$ Cryptography $\cdot$ Advanced Computer
-    Networking $\cdot$ Cloud Computing $\cdot$ Compilers}}
+  Computer Science (MSc), College of Engineering}{December 2012}{
+	\begin{itemize*}
+		\item \area{Select
+    coursework}{Security $\cdot$ Cryptography $\cdot$ Advanced Computer
+    Networking $\cdot$ Cloud Computing $\cdot$ Compilers}
+	\end{itemize*}
+	\headerrow{\emph{Bachelors of Science in Computer Science (BSc), College of
+      Engineering}}{\emph{May 2011}}
+	\begin{itemize*}
+  \item Minor in Mathematics
+	\end{itemize*}
+}
 
-%\education{The University of Alabama}{Tuscaloosa, AL}{Bachelors of Science in Computer Science (BSc), College of Engineering}
-%{May 2011}{Minor in Mathematics}
+% \education{The University of Alabama}{Tuscaloosa, AL}{Bachelors of Science in Computer Science (BSc), College of Engineering}{May 2011}{Minor in Mathematics}
 
 \vspace*{3pt}
 
 \header{Skills}
+\vspace*{-5pt}
 \begin{itemize*}
 \item Proficient in application development with Scala, Java, Python, Go, C/\CPP, Ruby, and UNIX shell scripting. 
 \item Experience with distributed systems, streaming data processing, security auditing, elastic
@@ -141,7 +148,12 @@
 
 \header{Related Experience}
 \employment{UBER Technologies, Inc}{San Francisco, CA}{Software Engineer}{January 2015 - Present}{
-Platform Engineering - Embedded with Data team (Jan 2015-Dec 2015)
+\end{itemize*}
+	\headerrow
+  {\emph{hello}}
+		{\emph{world}}
+\begin{itemize*}:
+\item Platform Engineering - Embedded with Data team (Jan 2015-Dec 2015)
 \begin{itemize*}
   \item Initially embedded with the Vertica Data Warehouse team
   \item Scaled data warehouse from 1 cluster of 8 vertica nodes to 8 clusters of 32 nodes spanning multiple datacenters.
