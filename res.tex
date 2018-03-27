@@ -130,6 +130,12 @@
 
 \vspace*{3pt}
 
+\header{Overview}
+\begin{overview}\setlength{\parindent}{15pt}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+\end{overview}
+\\
+\vspace*{3pt}
 \header{Education}
 \education{The University of Alabama}{Tuscaloosa, AL}{Masters of Science in
   Computer Science (MSc), College of Engineering}{Dec 2012}{
@@ -141,7 +147,7 @@
 	\headerrow{\emph{Bachelors of Science in Computer Science (BSc), College of
       Engineering}}{\emph{May 2011}}
 	\begin{itemize*}
-  \item Minor in Mathematics
+  \item \emph{Minor in Mathematics}
 	\end{itemize*}
 }
 
@@ -179,7 +185,6 @@
     a descriptive fare adjustment language DSL sourced from multiple providers
     such as tolls, maps, surge, subscriptions, and etc to meet current and future
     business product needs.}
-  % \item Oversaw all-active data re-architecture and migration.
 \item \area{Promotions}{Worked on the Promotions platform team. Built auditing
     tools for post-transaction analysis of awarded user promotions and executed
     automatic remediation in the event any real-time systems had failed.}
@@ -199,7 +204,6 @@ at rates >500GiB/s across multiple regions.
       able to re-balance load to within a standard deviation of 0.0001\%.
     \item Automatic cluster expansion, on-line data rebalancing, and contraction
       when a broker fails; features not implemented in open source Kafka.
-    %\item Visualization tools to understand failure cases and intra-broker affinities.
     \end{itemize*}
     \vspace*{-5pt}
     }
@@ -234,7 +238,9 @@ technologies including Vertica, Hadoop, Redis, MemSQL, and other data stores.
   over the last several years.
 }
 }
+\pagebreak
 
+\header{Related Experience - Continued}
 \employment{Rocket Lawyer}{San Francisco, CA}{Senior Systems Engineer (original
   title: Systems Engineer)}{Jan 2013 - Jan 2015}{
 Designed service infrastructure and provided 24/7 on-call support for a high
@@ -248,7 +254,6 @@ and reduced p99 latencies from 2000ms to 150ms.
 \item Built tooling for continuous integration, dynamic configuration
   management, deployment management, monitoring, and automated incident
   detection and remediation.
-% \item Developed internal tools for code visualization, client-service dependendency graphs and version drift, for a distributed services architecture of 50+ services built from a shared core. Operations dashboards of metric and log visualization tools built on top of hystrix, graphite, and logstash.
 }
 
 \employment{nine.is}{Tuscaloosa, AL}{Software Engineer / Web Developer}{Jan 2012 - Dec 2012}{
@@ -257,8 +262,6 @@ Development and maintenance of multiple existing and new projects for this small
   outsource contract based operation to doing their own in-house software development.
 }
 
-% TODO: Reduce to three or four bullets
-% hilights: kernel development/active tuning, GENI research, DTN, video streaming
 \employment{The University of Alabama}{Tuscaloosa, AL}{Graduate Research Assistant}{Jan 2010 - Dec 2012}{
 Research on proactive and adaptive techniques for cross-layer network
 reconfiguration in an effort to optimize performance when a network
@@ -274,32 +277,54 @@ is under load or attack by hostile actors. Project details subject to export con
 %\item Opportunistic Network Environment (ONE) Simulator - Extended the simulation environment to support simple throwbox placement and management with geographical mapping tools. Implemented, modified, and experimented with multiple DTN protocols.
 }
 
-%\employment{The University of Alabama}{Tuscaloosa, AL}{Graduate Research Assistant}{June 2011 - December 2012}{
-%Research on proactive and adaptive techniques for cross-layer network reconfiguration in an effort to achieve optimal performance even when a network is under load or attack.
-%\item Worked with the Linux kernel network stack, routing protocols, and physical device drivers for fine parameter tuning and performance analysis.
-%\item Application development and implementation of an autonomous cross-layer networking scheme utilizing C, Python, and Java, and an adaptive video streaming client application utilizing Java and gstreamer.
-%\item Design and implementation of a universal description language for robots and their capabilities to further development of a deterministic universal device driver for most robots.
-%\item Research on automated auditing, analysis, and penetration testing of virtual machine images for use in cloud computing - an extension of my work on GENI.
-%}
-
-%\employment{The University of Alabama}{Tuscaloosa, AL}{Undergraduate Research Assistant (NSF)}{2010 - 2011}{
-%Security analysis and architecture design for GENI, a network research testbed for developing internet technologies.
-%\item Experimentation with Delay Tolerant Networks, optimizing cost in low connectivity environments with throwboxes.
-%\item Opportunistic Network Environment (ONE) Simulator - Extended the simulation environment to support simple throwbox placement and management with geographical mapping tools. Implemented, modified, and experimented with multiple DTN protocols.
-%}
-
 \employment{Brewer Porch Children's Center}{Tuscaloosa, AL}{Unix Systems
   Administrator}{Aug 2004 - May 2006}{
 Managed numerous services including samba, mail, file, billing, print, web, and applications servers running on Linux, Solaris, and Microsoft Server systems.
 \item Maintained strict networking and client security policies in compliance with HIPAA regulations.
 \item Developed custom applications for internal organization management and patient document processing.
-%\item Maintenance, repair, and installations of Mac, Unix, and PC workstations.
 }
+
 \vspace*{3pt}
+
 \header{Publications}
+\vspace*{-5pt}
 \begin{itemize*}
-\item Dawei Li, Xiaoyan Hong, Jason Bowman "Evaluation of Security Vulnerabilities by Using ProtoGENI as a Launchpad", IEEE Globecom 2011, Houston, USA, Dec. 2011.
+\item Dawei Li, Jason Bowman, Xiaoyan Hong "Evaluation of Security Vulnerabilities by Using ProtoGENI as a Launchpad", IEEE Globecom 2011, Houston, USA, Dec. 2011.
 \item M. Anderson, P. Kilgo, and J. Bowman. "RDIS: Generalizing domain concepts to specify device to framework mappings." In International Conference on Robotics and Automation, 2012. http://ua-robotics.net/index.php?title=RDIS
+\end{itemize*}
+
+\vspace*{3pt}
+
+\header{Outreach and Community Involvement}
+\vspace*{-5pt}
+\begin{itemize*}
+\item Mentor for Hackbright Academy, a 12 week intensive coding bootcamp focused
+  on empowering women aiming to pursue a career in the software engineering field.
+\item Mentor for dev/Mission, a non-profit program targeting low income youth
+  from 16-24 to expose them to potential careers in technology.
+\item Organized and ran an introduction to Scala and Functional programming
+  course based on Martin Odersky\'s course and book. Resources available on
+  my personal github. 
+\item Served as president from 2010 - 2012 of the Association for Computing
+  Machinery student chapter at The University of Alabama.
+\item Organized a mentoring/tutoring program for freshman and sophomore computer
+  science students in an effort to improve program retention and graduation
+  rates. Still going to this day, and graduation rates of freshman classes are
+  up from 5\% to nearly 50\%.
+\end{itemize*}
+
+\vspace*{3pt}
+
+\header{Interests}
+\vspace*{-5pt}
+\begin{itemize*}
+\item \textbf{Professional:} GNU/Linux$\cdot$ Distributed Systems $\cdot$ Open Source $\cdot$
+  System Architecture $\cdot$ Operating Systems $\cdot$ Functional Programming
+  $\cdot$ Stream Processing $\cdot$ Virtualization $\cdot$
+  Generative Programming $\cdot$ Language Development
+\item \textbf{Personal:} Reverse Engineering $\cdot$ Game Development \& Theory $\cdot$ Music Production $\cdot$
+  Electrical Engineering $\cdot$ Fabrication and DIY $\cdot$ Robotics $\cdot$ Mechanical
+  Keyboards $\cdot$ CAD Design $\cdot$ Rock Climbing $\cdot$ Emacs 
 \end{itemize*}
 \vspace*{8pt}
 
