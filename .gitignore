@@ -156,6 +156,7 @@ _minted*
 *.sagetex.py
 *.sagetex.scmd
 
+
 # scrwfile
 *.wrt
 
@@ -218,3 +219,6 @@ TSWLatexianTemp*
 
 # expex forward references with \gathertags
 *-tags.tex
+
+
+.pre-commit-config.yaml

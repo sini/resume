@@ -1,8 +1,8 @@
 % resume.tex
 % vim:set ft=tex spell:
 
-\documentclass[10pt,letterpaper]{article}
-\usepackage[letterpaper,margin=0.75in]{geometry}
+\documentclass[12pt,letterpaper]{article}
+\usepackage[letterpaper,margin=0.8in]{geometry}
 \usepackage[utf8]{inputenc}
 \usepackage{mdwlist}
 \usepackage[T1]{fontenc}
@@ -20,7 +20,7 @@
     colorlinks=true,
     linkcolor=blue,
     filecolor=magenta,      
-    urlcolor=grey,
+    urlcolor=black,
 }
 
 \newcommand{\area}[2]{\emph{#1:}   #2}
@@ -36,20 +36,17 @@
 \end{center}
 \vspace*{-8pt}
 }
-\newenvironment{achievements}{\begin{list}{$\bullet$}{\topsep 0pt \itemsep -2pt}}{\vspace*{4pt}\end{list}}
+\newenvironment{achievements}{\begin{list}{$\bullet$}{\topsep 0pt \itemsep 0pt}}{\vspace*{4pt}\end{list}}
 
 \newcommand{\subemployment}[3]{
 	\headerrow
-  {\hspace{8pt}\textbf{\emph{#1}}}
+		{\hspace{8pt}\textbf{\emph{#1}}}
 		{\emph{#2}}
-  \vspace*{-15pt}
-\begin{itemize*}
-\item #3 
-\end{itemize*}
-% \vspace*{3pt}
+	\vspace*{-15pt}
+	\begin{itemize*}
+		\item #3
+	\end{itemize*}
 }
-
-
 
 % indentsection style, used for sections that aren't already in lists
 % that need indentation to the level of all text in the document
@@ -123,9 +120,8 @@
 
 \contact{Jason Bowman}
 {San Francisco, CA}
-{\faPhone \hspace{0.1em} (205) 202-9668 \hspace{0.1em} \faEnvelope \hspace{0.1em}
-  \href{mailto:sinistar@gmail.com}{sinistar@gmail.com} \hspace{0.1em} \faGithub \hspace{0.1em} \href{https://www.github.com/sini}{sini} \hspace{0.1em} \faTwitter
-  \hspace{0.1em} \href{https://www.twitter.com/sinistar}{sinistar} \hspace{0.1em} \faLinkedin \hspace{0.1em}
+{\faPhone \hspace{0.1em} (650) 445-9552 \hspace{0.1em} \faEnvelope \hspace{0.1em}
+  \href{mailto:sinistar@gmail.com}{jason@json64.dev} \hspace{0.1em} \faGithub \hspace{0.1em} \href{https://www.github.com/sini}{sini} \hspace{0.1em} \hspace{0.1em} \faLinkedin \hspace{0.1em}
   \href{https://linkedin.com/in/sinistar}{sinistar}}
 
 \vspace*{3pt}
@@ -142,7 +138,8 @@
 	\begin{itemize*}
 		\item \area{Select
     coursework}{Security $\cdot$ Cryptography $\cdot$ Advanced Computer
-    Networking $\cdot$ Cloud Computing $\cdot$ Compilers}
+    Networking $\cdot$ Compilers}
+    % $\cdot$ Cloud Computing
 	\end{itemize*}
 	\headerrow{\emph{Bachelors of Science in Computer Science (BSc), College of
       Engineering}}{\emph{May 2011}}
@@ -165,82 +162,53 @@
 \item Experience architecting, scaling, and optimizing high volume QPS applications in hyper-growth environments.
 \item Experience building developer experience tools, continuous integration
   systems, and production infrastructure services.
-\item Over 20 years experience with GNU/Linux and other UNIX platforms.
+\item Over 25 years experience with GNU/Linux and other UNIX platforms.
 \item Technical project management and organizational leadership experience.
 \end{itemize*}
 \vspace*{3pt}
 
 \header{Related Experience}
-\employmentNoList{UBER Technologies, Inc}{San Francisco, CA}{Software Engineer}{Jan 2015 - Present}{
+\employment{Highnote}{San Francisco, CA}{Senior Software Engineer}{Aug 2022 - Sep 2023}{
+Infrastructure engineering for B2B card issuer fintech, focusing on data systems and large-scale platform migrations.
+\item \area{Spanner Replication System}{Implemented transaction log replay and mirroring system using Google Dataflow to enable cross-region Spanner cluster replication, ensuring 99.99\% uptime for payment processing systems.}
+\item \area{Platform Modernization}{Led mono-repo wide framework upgrades affecting 50+ microservices. Built custom AST parsing tools and automated migration utilities, reducing manual effort by 80\% and eliminating version skew across services.}
+\item Built data pipeline infrastructure for real-time payment analytics and fraud detection, processing millions of transactions daily with sub-100ms latency requirements.
+}
+
+\employment{Unity Technologies}{San Francisco, CA}{Senior Software Engineer / Tech Lead}{Jul 2018 - Aug 2022}{
+Led engineering teams and architected large-scale data platform infrastructure serving Unity's analytics and ML workloads.
+\item \area{Data Platform Team Lead}{Led team of 6 engineers in complete re-architecture of analytics ingestion pipeline during AWS to GCP migration. Implemented BigQuery-based data lake processing 1M events/sec (10B daily) using Google Dataflow/Apache Beam.}
+\item \area{GDPR Compliance \& Data Governance}{Designed and implemented end-to-end data encryption and cryptographic protections. Built automated schema inference tools to identify PII in unstructured data, enabling data owners to annotate and classify sensitive information.}
+\item \area{ML-Agents Cloud Platform}{Architected cloud-native reinforcement learning platform on GKE, providing framework for managing distributed training experiments and Unity simulation builds. Enabled researchers to scale RL training across hundreds of nodes.}
+\item \area{Unity Simulation \& Robotics}{Built remote tunneling infrastructure allowing secure access to Unity instances in shared cloud environments. Developed tooling to bridge on-premise robotics workflows with cloud-based simulation infrastructure.}
+}
+
+
+\employmentNoList{Uber Technologies, Inc}{San Francisco, CA}{Software Engineer}{Jan 2015 - Jul 2018}{
   \\
- \subemployment{Marketplace Engineering // Fares}{Nov 2016 - Present}{
- Transferred to marketplace engineering to work on direct end-user facing
- product features spanning back-end services and mobile applications. 
-\item \area{[Project Lead] Pricing Integrity Engine}{A platform for real-time
-    and batch process data validation of auditable records for user fare data, supporting
-    arbitrary business rules and constraints providing analytical data and
-    automatic remediation.}
-\item \area{Fares Platform}{Worked on the next generation fares platform
-    powering all fare calculations for all products from uberX to Eats through
-    a descriptive fare adjustment language DSL sourced from multiple providers
-    such as tolls, maps, surge, subscriptions, etc. to meet current and future
-    business product needs.}
-\item \area{Promotions}{Worked on the Promotions platform team. Built auditing
-    tools for post-transaction analysis of awarded user promotions and executed
-    automatic remediation in the event any real-time systems had failed.}
+ \subemployment{Marketplace Engineering // Fares}{Nov 2016 - Dec 2019}{
+ Led development of end-user facing product features spanning back-end services and mobile applications.
+\item \area{[Tech Lead] Pricing Integrity Engine}{Built real-time and batch data validation platform for fare data with configurable business rules, analytics, and automatic remediation.}
+\item \area{Fares Platform}{Developed next-generation fare calculation platform for all Uber products using descriptive DSL, integrating tolls, maps, surge, and subscription data.}
+\item \area{Promotions Platform}{Built auditing and remediation tools for post-transaction analysis of user promotions across real-time systems.}
 }
 
 \subemployment
 {Site Reliability Engineering // Streaming SRE}{Dec 2015 - Oct 2016}{
-Senior engineer on the newly formed Streaming SRE team. Defined team OKRs and
-KPIs, responsible for onboarding and mentoring several junior engineers as we
-built out our Kafka infrastructure to a scale of several thousand brokers processing data
-at rates >500GiB/s across multiple regions.
-\item \area{[Solo Project] Kafka Intelligent Transformation Tool (K.I.T.T)}{
-    \vspace*{-5pt}
-    \begin{itemize*}
-    \item Modified Kafka controller to optimally redistribute partition
-      assignments. Defined models to generate near optimal data distribution,
-      able to re-balance load to within a standard deviation of 0.0001\%.
-    \item Automatic cluster expansion, on-line data rebalancing, and contraction
-      when a broker fails; features not implemented in open source Kafka.
-    \end{itemize*}
-    \vspace*{-5pt}
-    }
-\item \area{[Solo Project] Kafka Performance Optimization}{
-    \vspace*{-5pt}
-    \begin{itemize*}
-    \item Tuned Broker configuration, JVM options, Linux kernel flags and
-      filesystem parameters, and hardware RAID controller alrignment. Modified
-      broker network and disk I/O source code. Achieved an increase in maximum
-      broker throughput of >500\% over default configuration, and a 5000\%
-      decrease in p99 latencies up to that threshold.
-    \item \emph{Outcome:} A reduction in hardware requirements reducing our operational costs by several hundred million dollars.
-    \end{itemize*}
-    \vspace*{-5pt}
-    }
+Senior engineer on newly formed Streaming SRE team. Led team building and mentored junior engineers while scaling Kafka infrastructure to thousands of brokers processing >500GiB/s across multiple regions.
+\item \area{Kafka Infrastructure Projects}{Built intelligent partition redistribution tool achieving optimal load balancing within 0.0001\% standard deviation and enabling self-healing of broker failures. Implemented performance optimizations increasing throughput >500\% and reducing p99 latencies by 5000\%, saving hundreds of millions in projected operational and hardware costs.}
 }
 
 \subemployment
   {Platform Engineering // Data Engineering Embed}
   {Jan 2015 - Dec 2015}{
-Provided direct support to the Data organization, which accounted for more than
-30\% of UBER's overall hardware footprint. Built automation tooling for
-provisioning, data replication, ETL, and cluster management for numerous
-technologies including Vertica, Hadoop, Redis, MemSQL, and other data stores.
-\item Designed architecture and tools to ensure data security and integrity, as well as
-  compliance with local regulations, as we expanded from one data center to
-  many and entered new market regions such as China, India, and Russia.
-\item \area{[Solo Project] uServer} A service for self-service hardware
-  provisioning, enabling engineers to manage their own hardware reducing their
-  dependence on the platform engineering team. The service was  adopted company
-  wide and has been used to provision 100’s of thousands of bare-metal hosts
-  over the last several years.
+Supported Data organization representing 30\% of Uber's hardware footprint. Built automation for provisioning, replication, ETL, and cluster management across Vertica, Hadoop, Redis, and MemSQL.
+\item Designed data security architecture and compliance tools for global expansion into China, India, and Russia.
+\item \area{[Tech Lead] uServer}{Built self-service hardware provisioning platform adopted company-wide, provisioning hundreds of thousands of bare-metal hosts across our datacenters.}
 }
 }
-\pagebreak
 
-\header{Related Experience - Continued}
+% \header{Related Experience - Continued}
 \employment{Rocket Lawyer}{San Francisco, CA}{Senior Systems Engineer (original
   title: Systems Engineer)}{Jan 2013 - Jan 2015}{
 Designed service infrastructure and provided 24/7 on-call support for a high
@@ -257,31 +225,33 @@ and reduced p99 latencies from 2000ms to 150ms.
 }
 
 \employment{nine.is}{Tuscaloosa, AL}{Software Engineer / Web Developer}{Jan 2012 - Dec 2012}{
-Development and maintenance of multiple existing and new projects for this small design company in a several languages and frameworks including PHP, JavaScript, and Ruby on Rails.
-\item Built and led a team of junior engineers to transition nine.is from an
-  outsource contract based operation to doing their own in-house software development.
+Full-stack development and team leadership for design company transitioning to in-house software development. Built applications using PHP, JavaScript, and Ruby on Rails.
+%Development and maintenance of multiple existing and new projects for this small design company in a several languages and frameworks including PHP, JavaScript, and Ruby on Rails.
+%\item Built and led a team of junior engineers to transition nine.is from an
+%  outsource contract based operation to doing their own in-house software development.
 }
 
 \employment{The University of Alabama}{Tuscaloosa, AL}{Graduate Research Assistant}{Jan 2010 - Dec 2012}{
-Research on proactive and adaptive techniques for cross-layer network
-reconfiguration in an effort to optimize performance when a network
-is under load or attack by hostile actors. Project details subject to export control restrictions.
-\item Worked on the Linux networking stack, defining a custom TCP variant
-  routing protocol, and physical device driver modification for fine parameter tuning and performance analysis.
+Research on network optimization and security for next-generation internet infrastructure. Developed custom TCP variants and performed security analysis for GENI experimental network testbed.
+%Research on proactive and adaptive techniques for cross-layer network
+%reconfiguration in an effort to optimize performance when a network
+%is under load or attack by hostile actors. Project details subject to export control restrictions.
+%\item Worked on the Linux networking stack, defining a custom TCP variant
+%  routing protocol, and physical device driver modification for fine parameter tuning and performance analysis.
+%\item Security analysis and architecture design for GENI, a global network
+%  research experimentation test-bed for developing new internet routing technologies.
 %\item Application development and implementation of an autonomous cross-layer networking scheme utilizing C, Python, and Java, and an adaptive video streaming client application utilizing Java and gstreamer.
 %\item Design and implementation of a universal description language for robots and their capabilities to further development of a deterministic universal device driver for most robots.
 %\item Research on automated auditing, analysis, and penetration testing of virtual machine images for use in cloud computing - an extension of my work on GENI.
-\item Security analysis and architecture design for GENI, a global network
-  research experimentation test-bed for developing new internet routing technologies.
 %\item Experimentation with Delay Tolerant Networks, optimizing cost in low connectivity environments with throwboxes.
 %\item Opportunistic Network Environment (ONE) Simulator - Extended the simulation environment to support simple throwbox placement and management with geographical mapping tools. Implemented, modified, and experimented with multiple DTN protocols.
 }
 
-\employment{Brewer Porch Children's Center}{Tuscaloosa, AL}{Unix Systems
-  Administrator}{Aug 2004 - May 2006}{
-Managed numerous services including samba, mail, file, billing, print, web, and applications servers running on Linux, Solaris, and Microsoft Server systems.
-\item Maintained strict networking and client security policies in compliance with HIPAA regulations.
-\item Developed custom applications for internal organization management and patient document processing.
+\employment{Brewer Porch Children's Center}{Tuscaloosa, AL}{Unix Systems Administrator}{Aug 2004 - May 2006}{
+Systems administration for healthcare organization. Managed Linux/Solaris infrastructure and ensured HIPAA compliance for patient data systems.
+%Managed numerous services including samba, mail, file, billing, print, web, and applications servers running on Linux, Solaris, and Microsoft Server systems.
+%\item Maintained strict networking and client security policies in compliance with HIPAA regulations.
+%\item Developed custom applications for internal organization management and patient document processing.
 }
 
 \vspace*{3pt}
@@ -329,5 +299,4 @@ Managed numerous services including samba, mail, file, billing, print, web, and 
 \end{itemize*}
 \vspace*{8pt}
 
-	
 \end{document}
