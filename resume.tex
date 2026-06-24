@@ -15,6 +15,7 @@
 \pagestyle{empty}
 \setlength{\tabcolsep}{0em}
 \raggedright
+\raggedbottom
 \def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
 
 % Modern Sans palette (slate / charcoal accent)
@@ -100,16 +101,25 @@
 \vspace*{3pt}
 
 \header{Summary}
-% --- Active: Nix / developer-tooling specialist audience ---
-\noindent Staff/Principal-level platform and infrastructure engineer with over a
-decade architecting distributed systems at hyper-growth scale (Uber, Unity,
-Highnote), paired with deep programming-language and developer-tooling expertise.
-Now building \emph{Denful} full-time and in the open: composable, theory-grounded
-Nix libraries and configuration frameworks built on algebraic effects, scope
-graphs, and graph rewriting. Equally at home at the bottom of the stack --- Kafka,
-Spanner, Linux, networking --- and the top --- DSLs, type systems, and effect systems.
+% -- Active: Nix / developer-tooling specialist audience --
+\noindent Staff/Principal-level engineer -- by turns hacker, maker, and academic -- with
+over a decade spanning infrastructure, data, backend services, and open-source
+frameworks, from startup to IPO. The arc runs from founding Uber's Site Reliability
+Engineering organization and building out one of the era's largest Kafka deployments
+-- paving the way for others in the industry to follow -- through architecting,
+leading, and building Unity's company-wide data platform at millions of events per
+second, to cross-region payments infrastructure at Highnote. Years on the front lines
+forged one conviction, held across every domain: that correctness, resilience, and
+integrity are designed in -- correct by construction, not by prayer and runbook -- on
+computer-science fundamentals rather than guesswork. \emph{Denful}, built full-time and
+in the open, is the pursuit of exactly that: composable, verifiable foundations that
+make rigor the default rather than a luxury, from a single laptop to a fleet of
+thousands. The work spans the full stack -- from the Linux kernel and network stack,
+through distributed data platforms (Kafka, Spanner), to DSLs, type systems, and effect
+systems -- and that rigor matters more than ever as agentic coding makes
+plausible-but-wrong systems cheap to produce and expensive to validate.
 
-% --- Alternate: big-tech / general infrastructure audience ---
+% -- Alternate: big-tech / general infrastructure audience --
 % \noindent Staff/Principal-level platform and infrastructure engineer with over a
 % decade scaling distributed systems in hyper-growth environments (Uber, Unity,
 % Highnote): real-time data platforms processing billions of events per day, payments
@@ -117,9 +127,9 @@ Spanner, Linux, networking --- and the top --- DSLs, type systems, and effect sy
 % pursuing independent, full-time open-source R\&D in developer tooling and
 % reproducible configuration management.
 
-% --- Alternate: startup / scaleup audience ---
+% -- Alternate: startup / scaleup audience --
 % \noindent Versatile Staff/Principal engineer who has owned systems end-to-end across
-% payments, data, and ML platforms at Uber, Unity, and Highnote --- from Kafka and
+% payments, data, and ML platforms at Uber, Unity, and Highnote -- from Kafka and
 % Spanner internals up to developer-experience tooling. Currently building an
 % open-source developer-tooling ecosystem full-time. Thrives on high autonomy and
 % foundational, ambiguous problems.
@@ -127,49 +137,40 @@ Spanner, Linux, networking --- and the top --- DSLs, type systems, and effect sy
 \vspace*{3pt}
 
 \header{Education}
-\education{The University of Alabama}{Tuscaloosa, AL}{Master of Science in
-  Computer Science (MSc), College of Engineering}{2012}{
-	\begin{itemize*}
-		\item \area{Select
-    coursework}{Security $\cdot$ Cryptography $\cdot$ Advanced Computer
-    Networking $\cdot$ Compilers}
-	\end{itemize*}
-	\headerrow{{\itshape\color{accent}Bachelor of Science in Computer Science (BSc), College of
-      Engineering}}{\color{muted}\itshape 2011}
-	\begin{itemize*}
-  \item \emph{Minor in Mathematics}
-	\end{itemize*}
+\education{The University of Alabama}{Tuscaloosa, AL}{Master of Science in Computer Science (MSc)}{2012}{
+	\headerrow{{\itshape\color{accent}Bachelor of Science in Computer Science (BSc), Minor in Mathematics}}{\color{muted}\itshape 2011}
 }
 
-\vspace*{3pt}
+\vspace*{-4pt}
 
 \header{Skills}
 \noindent
 \area{Languages \& Platforms}{Scala, Nix, Python, Go, Java, C/\CPP, Ruby, and UNIX shell; 25+ years on GNU/Linux and UNIX; strong functional-programming background}\\
-\area{Language Engineering \& Tooling}{DSL design, type systems, algebraic effects, term and graph rewriting, AST-based codemods and automated migration, macros and metaprogramming; sbt, Bloop, Metals, JMH, Gatling}\\
-\area{Distributed Systems}{Kafka, stream processing, high-QPS services in hyper-growth environments, elastic compute, API design, performance optimization (zero-allocation hashing, bloom filters), graceful fault detection and recovery}\\
+\area{Language Engineering \& Tooling}{DSL design, type systems, algebraic effects, term and graph rewriting, AST-based codemods and automated migration, parser generators (ANTLR, tree-sitter), macros and metaprogramming; sbt, Bloop, Metals, JMH, Gatling}\\
+\area{Distributed Systems}{Kafka, stream processing, high-QPS services in hyper-growth environments, elastic compute, API design, performance optimization, graceful fault detection and recovery}\\
+\area{Cloud \& Data}{GCP and AWS -- BigQuery, BigTable, Spanner, Dataflow / Apache Beam / Scio for specialized real-time pipelines, Avro (avro4s), GKE; PostgreSQL, Redis, ZooKeeper, Hadoop, Vertica}\\
+\area{Systems}{Linux kernel and kernel-module development, device drivers, network-stack and protocol optimization, source-level performance tuning, multimedia (gstreamer, ffmpeg)}\\
 \area{AI \& Machine Learning}{Reinforcement learning (PPO, SAC, GAIL) and distributed RL training platforms (pre-LLM-boom); LLM agentic workflows, multi-agent orchestration, and spec-driven development}\\
-\area{Cloud \& Data}{GCP and AWS --- BigQuery, BigTable, Spanner, Dataflow / Apache Beam / Scio (custom DoFn, Coder, WindowFn), Avro (avro4s), GKE; PostgreSQL, Redis, ZooKeeper, Hadoop, Vertica}\\
-\area{Kubernetes \& Cloud-Native}{Kubernetes (k3s), Cilium (eBPF CNI and network policies), Tailscale, Longhorn distributed storage, microVMs and GPU passthrough}\\
-\area{GitOps \& Infrastructure-as-Code}{ArgoCD, Flux, nixidy, NixOS fleet management (Colmena, nh), declarative secrets (agenix, SOPS), CI/CD and developer-experience tooling}\\
+\area{Kubernetes \& Cloud-Native}{Cilium (eBPF CNI and network policies), microVMs, hardware virtualization (VFIO, GPU passthrough)}\\
+\area{GitOps \& Infrastructure-as-Code}{ArgoCD, Flux, Terraform, Ansible, Puppet, Chef, SaltStack, bare-metal and cloud fleet management, declarative secrets (agenix, SOPS), CI/CD and developer-experience tooling}\\
 \area{Observability \& Reliability}{Grafana, Prometheus, Grafana Alloy, metrics and log pipelines, alerting; 24/7 on-call, automated incident detection and remediation, backup and disaster recovery}\\
 \area{Security \& Compliance}{security auditing, applied cryptography (KMS envelope encryption, AES-CBC, key derivation), OIDC and access control, PII/GDPR data governance, HIPAA compliance}\\
-\area{Leadership}{technical project management, team lead and mentorship, organizational leadership}
+\area{Leadership}{Technical Project Management, Team Leadership, Mentorship, Organizational Leadership}
 
-\vspace*{3pt}
+\newpage
 
 \header{Experience}
 \employment{Denful}{Open Source}{Co-Founder}{2023 - Present}{
-Co-founded an open-source organization building composable, aspect-oriented Nix tooling, grounded in algebraic effects, interaction nets, and graph rewriting, with an active and growing community (\emph{den} at 400+ GitHub stars).
+Co-founded an open-source organization building composable, aspect-oriented Nix tooling, grounded in algebraic effects, interaction nets, and graph rewriting, with an active and growing community (\emph{den} at 450+ GitHub stars).
 \item \area{gen}{Authored \emph{gen}, the ecosystem's foundational layer: a suite of dependency-light, pure-Nix libraries spanning algebraic primitives, higher-order scope graphs, typed registries, selector and graph-query algebras, and guarded graph rewriting.}
-\item \area{den}{Lead developer of \emph{den}, a context-aware, aspect-oriented configuration framework that produces NixOS, Darwin, and Home-Manager outputs from a single declarative context, using algebraic effects to make configuration resolution explicit and testable.}
+\item \area{den}{Lead developer of \emph{den}, a context-aware, aspect-oriented configuration framework that produces NixOS, Darwin, and Home-Manager outputs from a single declarative source, using algebraic effects to make resolution explicit and testable.}
 \item \area{Domain-Agnostic Configuration}{Generalized the engine beyond NixOS to arbitrary configuration targets, demonstrated by extending it to Kubernetes GitOps through upstream contributions to \emph{nixidy}: a generic object match/rewrite rule engine and CRD-native module accessors.}
-\item \area{Graph-Based Infrastructure}{Modeled service topology, firewall rules, and access controls as derived properties of a typed relationship graph, synthesizing network policies and ACLs from declared service relationships rather than hand-maintained configuration.}
+\item \area{Graph-Based Infrastructure}{Modeled service topology, firewall rules, and access controls as derived properties of a typed relationship graph, synthesizing network policies and ACLs from declared service relationships rather than hand-maintaining configuration.}
 }
 
-% --- Denful, toned-back for a general / big-tech audience (swap with the block above) ---
+% -- Denful, toned-back for a general / big-tech audience (swap with the block above) --
 % \employment{Denful}{Open Source}{Co-Founder}{2023 - Present}{
-% Co-founded and work full-time on an open-source organization building developer tooling for reproducible system configuration, with a growing base of users and contributors (400+ GitHub stars).
+% Co-founded and work full-time on an open-source organization building developer tooling for reproducible system configuration, with a growing base of users and contributors (450+ GitHub stars).
 % \item \area{Foundational Libraries}{Authored \emph{gen}, a suite of small, dependency-light libraries for composable configuration that serve as the base layer of the wider ecosystem.}
 % \item \area{Configuration Framework}{Lead developer of \emph{den}, which generates Linux, macOS, and Home-Manager system configurations from a single declarative source, eliminating per-machine copy-paste and configuration drift.}
 % \item \area{Kubernetes \& GitOps}{Extended the model to Kubernetes GitOps through upstream contributions to \emph{nixidy}, including a generic object-rewriting rule engine.}
@@ -177,60 +178,50 @@ Co-founded an open-source organization building composable, aspect-oriented Nix 
 % }
 
 \employment{Highnote}{San Francisco, CA}{Senior Software Engineer}{2022 - 2023}{
-Infrastructure engineering for B2B card issuer fintech, focusing on data systems and large-scale platform migrations.
-\item \area{Spanner Replication System}{Implemented transaction log replay and mirroring system using Google Dataflow to enable cross-region Spanner cluster replication, ensuring 99.99\% uptime for payment processing systems.}
-\item \area{Codemods \& Migration Tooling}{Built AST-based codemods and automated migration utilities driving mono-repo-wide framework upgrades across 50+ microservices, cutting manual effort $\sim$80\% and eliminating version skew.}
-\item Built data pipeline infrastructure for real-time payment analytics and fraud detection, processing millions of transactions daily with sub-100ms latency requirements.
+Infrastructure engineering for a B2B card-issuing fintech, focused on data systems and large-scale platform migrations.
+\item \area{Spanner Replication System}{Implemented a transaction-log replay and mirroring system on Google Dataflow for cross-region Spanner replication, sustaining 99.99\% uptime for payment processing.}
+\item \area{Codemods \& Migration Tooling}{Engineered AST-based codemods and automated migration utilities driving mono-repo-wide framework upgrades across 50+ microservices, cutting manual effort $\sim$80\% and eliminating version skew.}
+\item Delivered data pipeline infrastructure for real-time payment analytics and fraud detection, processing millions of transactions daily with sub-100ms latency requirements.
 }
 
 \employment{Unity Technologies}{San Francisco, CA}{Senior Software Engineer / Tech Lead}{2018 - 2022}{
 Led engineering teams and architected large-scale data platform infrastructure serving analytics, advertising, and ML workloads at one of the world's largest mobile ad networks.
-\item \area{Data Platform (Sole Architect)}{Sole architect and primary engineer of Unity's company-wide event-ingestion platform --- the production replacement for a legacy daily-batch flow, built during the AWS-to-GCP migration while leading a team of 6. On Apache Beam/Scio and Dataflow (Kafka $\to$ schema'd Avro $\to$ GCS $\to$ BigQuery), it sustained 1M events/sec (10B/day) and cut end-to-end data-availability latency from 24+ hours to under 15 minutes at 99.99\% availability, consolidating three previously independent ingestion pipelines (analytics, advertising, CDP) into one platform adopted company-wide.}
-\item \area{GDPR \& CCPA Compliance}{Architected the platform's privacy layer and led the cross-functional rollout with Legal and company-wide data owners. PII was split into a separate KMS-encrypted stream and access-controlled store, with subject-level cryptographic compliance keys enabling right-to-erasure across the data lake --- plus PII hashing, geo-coordinate fuzzing, GeoIP enrichment, and automated statistical PII classification --- flagging fields by value cardinality and uniqueness for data-owner review and refinement. Per-owner bucketing provided tenant-scoped access controls and cost chargeback.}
-\item \area{Runtime Control Plane}{Designed a live control plane --- BigTable-backed schema, routing, and encoding registries hot-reloaded into running pipelines --- so data owners onboarded new event types and evolved schemas with zero redeploys, decoupling platform operations from per-team data changes. Automated schema derivation inferred Avro contracts from existing data.}
-\item \area{Reliability Tier}{Built the platform's fault-tolerance layer --- dead-letter capture/replay with rate-limited backoff and BigQuery load-job monitoring with automatic retry --- sustaining delivery guarantees at 10B events/day.}
-% --- Optional Unity data-platform bullets (uncomment any; each adds ~2-3 lines, may push to a 5th page) ---
+\item \area{Data Platform (Sole Architect)}{Architect and primary engineer of Unity's company-wide event-ingestion platform -- the production replacement for a legacy daily-batch flow, built during the AWS-to-GCP migration while leading a team of 6. On Apache Beam/Scio and Dataflow (Kafka $\to$ schema'd Avro $\to$ GCS $\to$ BigQuery), it sustained 1M events/sec (10B/day) and cut end-to-end data-availability latency from 24+ hours to under 15 minutes at 99.99\% availability, consolidating three previously independent pipelines (analytics, advertising, CDP) into a single platform adopted across the company.}
+\item \area{GDPR \& CCPA Compliance}{Architected the platform's privacy layer and led the cross-functional rollout with Legal and company-wide data owners. PII was split into a separate KMS-encrypted stream and access-controlled store, with subject-level cryptographic compliance keys enabling right-to-erasure across the data lake -- plus PII hashing, geo-coordinate fuzzing, GeoIP enrichment, and automated statistical PII classification -- flagging fields by value cardinality and uniqueness for data-owner review and refinement. Per-owner bucketing provided tenant-scoped access controls and cost chargeback.}
+\item \area{Runtime Control Plane}{Designed a live control plane -- BigTable-backed schema, routing, and encoding registries hot-reloaded into running pipelines -- so data owners onboarded new event types and evolved schemas with zero redeploys, decoupling platform operations from per-team data changes. Automated schema derivation inferred Avro contracts from existing data.}
+\item \area{Reliability Tier}{Built the platform's fault-tolerance layer -- dead-letter capture/replay with rate-limited backoff and BigQuery load-job monitoring with automatic retry -- sustaining delivery guarantees at 10B events/day.}
+% -- Optional Unity data-platform bullets (uncomment any; each adds ~2-3 lines, may push to a 5th page) --
 % \item \area{Migration Engine}{Executed the AWS-to-GCP cutover with a backfill engine that orchestrated state-machine-tracked Dataflow template jobs to reprocess all historical data into the new Avro format, applying PII filtering and compliance keys retroactively.}
-% \item \area{Throughput Engineering}{Sustained 1M events/sec via zero-allocation hashing, custom Beam coders and windowing, and bloom-filter deduplication --- validated with JMH micro-benchmarks and Gatling load tests against the HTTP ingest tier.}
+% \item \area{Throughput Engineering}{Sustained 1M events/sec via zero-allocation hashing, custom Beam coders and windowing, and bloom-filter deduplication -- validated with JMH micro-benchmarks and Gatling load tests against the HTTP ingest tier.}
 % \item \area{Operational Tooling}{Built the platform's operational surface: schema publishing and validation, Kafka capture/replay tooling, and the Sheet-orchestrated backfill scheduler.}
-\item \area{ML-Agents RL Platform}{Architected a cloud-native reinforcement-learning platform on GKE for Unity's ML-Agents --- applied RL (PPO, SAC, GAIL) years before the current AI boom --- orchestrating distributed training experiments and Unity simulation builds, and scaling researchers' RL training across hundreds of nodes.}
-\item \area{Unity Simulation \& Robotics}{Built remote tunneling infrastructure allowing secure access to Unity instances in shared cloud environments. Developed tooling to bridge on-premise robotics workflows with cloud-based simulation infrastructure.}
+\item \area{ML-Agents RL Platform}{Architected a cloud-native reinforcement-learning platform on GKE for Unity's ML-Agents -- applied RL (PPO, SAC, GAIL) years before the current AI boom -- orchestrating distributed training experiments and Unity simulation builds, and scaling researchers' workloads across hundreds of nodes.}
+\item \area{Unity Simulation \& Robotics}{Stood up remote-tunneling infrastructure enabling secure access to Unity instances in shared cloud environments. Developed tooling to bridge on-premises robotics workflows with cloud-based simulation.}
 }
 
 
 \employmentNoList{Uber Technologies, Inc}{San Francisco, CA}{Software Engineer}{2015 - 2018}{
   \\[4pt]
  \subemployment{Marketplace Engineering // Fares}{2016 - 2018}{
- Led development of end-user facing product features spanning back-end services and mobile applications.
-\item \area{[Tech Lead] Pricing Integrity Engine}{Built real-time and batch data validation platform for fare data with configurable business rules, analytics, and automatic remediation.}
-\item \area{Fares Platform}{Developed next-generation fare calculation platform for all Uber products using descriptive DSL, integrating tolls, maps, surge, and subscription data.}
-\item \area{Promotions Platform}{Built auditing and remediation tools for post-transaction analysis of user promotions across real-time systems.}
+ Led development of end-user-facing product features spanning back-end services and mobile applications.
+\item \area{Pricing Integrity Engine}{Led development of a real-time and batch data-validation platform for fare data, with configurable business rules, analytics, and automatic remediation.}
+\item \area{Fares Platform}{Designed next-generation fare calculation platform for all Uber products using a descriptive DSL, integrating tolls, maps, surge, and subscription data.}
+\item \area{Promotions Platform}{Created auditing and remediation tools for post-transaction analysis of user promotions across real-time systems.}
 }
 
 \subemployment
-{Site Reliability Engineering // Streaming SRE}{2015 - 2016}{
-Senior engineer on newly formed Streaming SRE team. Led team building and mentored junior engineers while scaling Kafka infrastructure to thousands of brokers processing >500GiB/s across multiple regions.
-\item \area{Kafka Infrastructure Projects}{Built an intelligent partition-redistribution engine spanning hundreds of brokers across many clusters, driving load-distribution standard deviation from $\sim$53\% to 0.0001\% of mean, eliminating disk hotspots and self-healing broker failures. Filesystem and configuration tuning delivered over 5$\times$ (500\%) throughput in synthetic benchmarks; in production, p99 produce latency dropped from recurring $\sim$500ms spikes to a stable $\sim$10ms ($\sim$50$\times$) and request-handler utilization fell from $\sim$80\% to $\sim$20\% --- averting a projected nine-figure migration to an all-SSD broker fleet by proving the existing disk stack could meet I/O targets through optimization alone.}
-}
-
-\subemployment
-  {Platform Engineering // Data Engineering Embed}
-  {2015}{
-Supported Data organization representing 30\% of Uber's hardware footprint. Built automation for provisioning, replication, ETL, and cluster management across Vertica, Hadoop, Redis, and MemSQL.
-\item Designed data security architecture and compliance tools for global expansion into China, India, and Russia.
-\item \area{[Tech Lead] uServer}{Built self-service hardware provisioning platform adopted company-wide, provisioning hundreds of thousands of bare-metal hosts across our datacenters.}
+{Site Reliability Engineering}{2015 - 2016}{
+An early engineer at Uber and founding engineer of its Site Reliability Engineering organization. Originally served all of Data -- the better part of a year on production-critical Vertica and data-warehouse reliability (30\% of Uber's hardware footprint), automating provisioning, replication, ETL, and cluster management across Vertica, Hadoop, Redis, and MemSQL. Then, as a lead on the Streaming SRE team, scaled one of the world's largest Kafka deployments of its era to thousands of brokers at >500 GiB/s across multiple regions.
+\item \area{Kafka Infrastructure}{Built an intelligent partition-redistribution engine spanning hundreds of brokers across many clusters, driving load-distribution standard deviation from $\sim$53\% to 0.0001\% of mean, eliminating disk hotspots and self-healing broker failures. Kernel, filesystem, JVM, and broker-source-code tuning delivered over 5$\times$ (500\%) throughput in synthetic benchmarks; in production, p99 produce latency dropped from recurring $\sim$500ms spikes to a stable $\sim$10ms ($\sim$50$\times$) and request-handler utilization fell from $\sim$80\% to $\sim$20\% -- averting a projected nine-figure migration to an all-SSD broker fleet by proving the existing disk stack could meet I/O targets through optimization alone.}
+\item \area{uServer}{Single-handedly built a self-service bare-metal provisioning platform adopted company-wide, managing hundreds of thousands of hosts across Uber's datacenters.}
+\item Designed data security architecture and compliance tooling for global expansion into China, India, and Russia.
 }
 }
 
 \employment{Rocket Lawyer}{San Francisco, CA}{Senior Systems Engineer (original
   title: Systems Engineer)}{2013 - 2015}{
-Designed service infrastructure and provided 24/7 on-call support for a high
-volume e-commerce site in the legal services sector, running primarily on the
-JVM and a legacy .NET platform. Improved site reliability from 99\% uptime to 99.99\%
-and reduced p99 latencies from 2000ms to 150ms.
-\item Performance analysis and optimization of application services and supporting infrastructure services.
-\item Extended application code to expose internal application
-  state, key performance metrics, enrich logging, and reduce overall latencies.
+Designed service infrastructure and provided 24/7 on-call support for a high-volume legal-services e-commerce site running primarily on the JVM and a legacy .NET platform. Improved reliability from 99\% uptime to 99.99\% and cut p99 latency from 2000ms to 150ms.
+\item Analyzed and optimized the performance of application services and the supporting infrastructure tier.
+\item Instrumented application code to expose internal state and key performance metrics, enrich logging, and reduce overall latency.
   Implemented dynamic service discovery and reconfiguration via ZooKeeper.
 \item Built tooling for continuous integration, dynamic configuration
   management, deployment management, monitoring, and automated incident
@@ -238,15 +229,15 @@ and reduced p99 latencies from 2000ms to 150ms.
 }
 
 \employment{nine.is}{Tuscaloosa, AL}{Software Engineer / Web Developer}{2012}{
-Full-stack development and team leadership for design company transitioning to in-house software development. Built applications using PHP, JavaScript, and Ruby on Rails.
+Full-stack development and team leadership for a design company expanding into in-house software. Built applications using PHP, JavaScript, and Ruby on Rails.
 }
 
 \employment{The University of Alabama}{Tuscaloosa, AL}{Graduate Research Assistant}{2010 - 2012}{
-Research on network optimization and security for next-generation internet infrastructure. Developed custom TCP variants and performed security analysis for GENI experimental network testbed.
+Export-controlled research on cross-layer network optimization and security for next-generation internet infrastructure. Worked in the Linux networking stack -- custom TCP-variant routing protocols and kernel-module development for fine-grained tuning and performance analysis -- alongside an adaptive video-streaming client (gstreamer), automated VM-image penetration testing, and security analysis for the GENI experimental network testbed.
 }
 
 \employment{Brewer Porch Children's Center}{Tuscaloosa, AL}{Unix Systems Administrator}{2004 - 2006}{
-Systems administration for healthcare organization. Managed Linux/Solaris infrastructure and ensured HIPAA compliance for patient data systems.
+Systems administration for a healthcare organization. Managed Linux/Solaris infrastructure and ensured HIPAA compliance for patient data.
 }
 
 \vspace*{3pt}
@@ -263,31 +254,33 @@ Systems administration for healthcare organization. Managed Linux/Solaris infras
 \begin{itemize*}
 \item Mentor for Hackbright Academy, a 12 week intensive coding bootcamp focused
   on empowering women aiming to pursue a career in the software engineering field.
-\item Mentor for dev/Mission, a non-profit program targeting low income youth
-  from 16-24 to expose them to potential careers in technology.
-\item Organized and ran an introduction to Scala and Functional Programming
+\item Mentor for dev/Mission, a non-profit program that exposes low-income youth aged 16-24 to careers in technology.
+\item Organized and ran an introductory Scala and Functional Programming
   course based on Martin Odersky\'s course and book. Resources available on
   my personal github.
 \item Served as president from 2010 - 2012 of the Association for Computing
   Machinery student chapter at The University of Alabama.
 \item Organized a mentoring/tutoring program for freshman and sophomore computer
-  science students in an effort to improve program retention and graduation
+  science students to improve program retention and graduation
   rates. Still going to this day, and graduation rates of freshman classes are
   up from 5\% to nearly 50\%.
 \end{itemize*}
 
-\vspace*{3pt}
+\newpage
 
+% Interests -- optional section (own page). To omit for roles where personal interests
+% are not appropriate, comment out the \newpage above and everything from \header{Interests}
+% down to \end{itemize*} below (keep \end{document}).
 \header{Interests}
 \begin{itemize*}
-\item \textbf{Professional:} GNU/Linux $\cdot$ Distributed Systems $\cdot$ Open Source $\cdot$
-  System Architecture $\cdot$ Operating Systems $\cdot$ Functional Programming
-  $\cdot$ Stream Processing $\cdot$ Virtualization $\cdot$
-  Generative Programming $\cdot$ Language Development
-\item \textbf{Personal:} Privacy $\cdot$ Reverse Engineering $\cdot$ Game
-  Development \& Theory $\cdot$ Music Production $\cdot$ Electrical Engineering
-  $\cdot$ Embedded Systems $\cdot$ Fabrication and DIY $\cdot$ Robotics $\cdot$ Mechanical
-  Keyboards $\cdot$ CAD Design $\cdot$ Rock Climbing $\cdot$ Emacs
+\item \textbf{Professional:} Functional Programming $\cdot$ Language Development $\cdot$
+  Generative Programming $\cdot$ Operating Systems $\cdot$ System Architecture $\cdot$
+  Distributed Systems $\cdot$ Stream Processing $\cdot$ Virtualization $\cdot$ Open Source
+  $\cdot$ GNU/Linux
+\item \textbf{Personal:} Reverse Engineering $\cdot$ Embedded Systems $\cdot$ Electrical
+  Engineering $\cdot$ Robotics $\cdot$ Game Development \& Theory $\cdot$ Music Production
+  $\cdot$ Fabrication and DIY $\cdot$ CAD Design $\cdot$ Privacy $\cdot$ Mechanical Keyboards
+  $\cdot$ Rock Climbing $\cdot$ Emacs
 \end{itemize*}
 \vspace*{8pt}
 
