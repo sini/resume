@@ -101,23 +101,36 @@
 \vspace*{3pt}
 
 \header{Summary}
-% -- Active: Nix / developer-tooling specialist audience --
-\noindent Staff/Principal-level engineer -- by turns hacker, maker, and academic -- with
-over a decade spanning infrastructure, data, backend services, and open-source
-frameworks, from startup to IPO. The arc runs from founding Uber's Site Reliability
-Engineering organization and building out one of the era's largest Kafka deployments
--- paving the way for others in the industry to follow -- through architecting,
-leading, and building Unity's company-wide data platform at millions of events per
-second, to cross-region payments infrastructure at Highnote. Years on the front lines
-forged one conviction, held across every domain: that correctness, resilience, and
-integrity are designed in -- correct by construction, not by prayer and runbook -- on
-computer-science fundamentals rather than guesswork. \emph{Denful}, built full-time and
-in the open, is the pursuit of exactly that: composable, verifiable foundations that
-make rigor the default rather than a luxury, from a single laptop to a fleet of
-thousands. The work spans the full stack -- from the Linux kernel and network stack,
-through distributed data platforms (Kafka, Spanner), to DSLs, type systems, and effect
-systems -- and that rigor matters more than ever as agentic coding makes
-plausible-but-wrong systems cheap to produce and expensive to validate.
+% -- ACTIVE: Distilled -- balanced for impact and scannability --
+\noindent Staff/Principal-level engineer, by turns hacker, maker, and academic.
+Over a decade scaling production systems from startup to IPO at Uber, Unity, and
+Highnote. Years of carrying the pager forged one conviction: correctness, resilience,
+and integrity are designed in, not bolted on. Infrastructure must be
+{\bfseries\color{accent}correct by construction, not by prayer and runbook}, grounded in
+computer-science fundamentals, not guesswork. That conviction is now full-time and in
+the open: co-founding \emph{Denful}, an open-source organization building composable,
+verifiable foundations that make rigor the default, from a single laptop to a fleet of
+thousands. That rigor only matters more as agentic coding makes plausible-but-wrong
+systems cheap to produce and costly to verify.
+
+% -- Long / Manifesto: targeted dev-tooling / funding / peer contexts (uncomment to swap) --
+% \noindent Staff/Principal-level engineer (by turns hacker, maker, and academic) with
+% over a decade spanning infrastructure, data, backend services, and language tooling,
+% from startup to IPO. The arc runs from founding Uber's Site Reliability
+% Engineering organization and building out one of the era's largest Kafka deployments,
+% a model others in the industry would adopt, through architecting, leading, and building
+% Unity's company-wide data platform at millions of events per second, to cross-region
+% payments infrastructure at Highnote. Years of carrying the pager, fighting cascading
+% outages, and writing post-mortems forged one conviction, held across every domain:
+% correctness, resilience, and integrity are designed in, not bolted on. Infrastructure
+% must be {\bfseries\color{accent}correct by construction, not by prayer and runbook}, and
+% grounded in computer-science fundamentals rather than guesswork. That conviction is now
+% a full-time, in-the-open pursuit: co-founding \emph{Denful}, an open-source organization
+% building composable and verifiable foundations that make rigor the default rather than a
+% luxury, from a single laptop to a fleet of thousands. That work spans the full stack,
+% from the Linux kernel and network stack, through distributed data platforms (Kafka,
+% Spanner), to DSLs, type systems, and effect systems. That rigor only matters more as
+% agentic coding makes plausible-but-wrong systems cheap to produce and costly to verify.
 
 % -- Alternate: big-tech / general infrastructure audience --
 % \noindent Staff/Principal-level platform and infrastructure engineer with over a
@@ -129,10 +142,11 @@ plausible-but-wrong systems cheap to produce and expensive to validate.
 
 % -- Alternate: startup / scaleup audience --
 % \noindent Versatile Staff/Principal engineer who has owned systems end-to-end across
-% payments, data, and ML platforms at Uber, Unity, and Highnote -- from Kafka and
-% Spanner internals up to developer-experience tooling. Currently building an
-% open-source developer-tooling ecosystem full-time. Thrives on high autonomy and
-% foundational, ambiguous problems.
+% payments, data, and ML platforms at Uber, Unity, and Highnote. Experience spans from
+% Kafka and Spanner internals up to developer-experience tooling. Currently building an
+% open-source developer-tooling ecosystem full-time, designing composable, verifiable
+% foundations built to withstand the plausible-but-wrong output of agentic workflows.
+% Thrives on high autonomy and foundational, ambiguous problems.
 
 \vspace*{3pt}
 
@@ -161,9 +175,9 @@ plausible-but-wrong systems cheap to produce and expensive to validate.
 
 \header{Experience}
 \employment{Denful}{Open Source}{Co-Founder}{2023 - Present}{
-Co-founded an open-source organization building composable, aspect-oriented Nix tooling, grounded in algebraic effects, interaction nets, and graph rewriting, with an active and growing community (\emph{den} at 450+ GitHub stars).
-\item \area{gen}{Authored \emph{gen}, the ecosystem's foundational layer: a suite of dependency-light, pure-Nix libraries spanning algebraic primitives, higher-order scope graphs, typed registries, selector and graph-query algebras, and guarded graph rewriting.}
-\item \area{den}{Lead developer of \emph{den}, a context-aware, aspect-oriented configuration framework that produces NixOS, Darwin, and Home-Manager outputs from a single declarative source, using algebraic effects to make resolution explicit and testable.}
+Co-founded an open-source organization building composable, aspect-oriented Nix tooling that makes system configuration verifiable and correct by construction, grounded in algebraic effects, interaction nets, and graph rewriting, with an active and growing community (\emph{den} at 450+ GitHub stars).
+\item \area{gen}{Authored \emph{gen}, the ecosystem's foundational layer: a suite of dependency-light, pure-Nix libraries spanning algebraic primitives, higher-order scope graphs, typed registries, selector and graph-query algebras, and guarded graph rewriting, the small, independently testable substrate the rest of the ecosystem rests on.}
+\item \area{den}{Lead developer of \emph{den}, a context-aware, aspect-oriented configuration framework that produces NixOS, Darwin, and Home-Manager outputs from a single declarative source, using algebraic effects to make resolution explicit, testable, and traceable.}
 \item \area{Domain-Agnostic Configuration}{Generalized the engine beyond NixOS to arbitrary configuration targets, demonstrated by extending it to Kubernetes GitOps through upstream contributions to \emph{nixidy}: a generic object match/rewrite rule engine and CRD-native module accessors.}
 \item \area{Graph-Based Infrastructure}{Modeled service topology, firewall rules, and access controls as derived properties of a typed relationship graph, synthesizing network policies and ACLs from declared service relationships rather than hand-maintaining configuration.}
 }
@@ -201,7 +215,7 @@ Led engineering teams and architected large-scale data platform infrastructure s
 
 \employmentNoList{Uber Technologies, Inc}{San Francisco, CA}{Software Engineer}{2015 - 2018}{
   \\[4pt]
- \subemployment{Marketplace Engineering // Fares}{2016 - 2018}{
+ \subemployment{Marketplace Engineering // Fares}{2017 - 2018}{
  Led development of end-user-facing product features spanning back-end services and mobile applications.
 \item \area{Pricing Integrity Engine}{Led development of a real-time and batch data-validation platform for fare data, with configurable business rules, analytics, and automatic remediation.}
 \item \area{Fares Platform}{Designed next-generation fare calculation platform for all Uber products using a descriptive DSL, integrating tolls, maps, surge, and subscription data.}
@@ -209,7 +223,7 @@ Led engineering teams and architected large-scale data platform infrastructure s
 }
 
 \subemployment
-{Site Reliability Engineering}{2015 - 2016}{
+{Site Reliability Engineering}{2015 - 2017}{
 An early engineer at Uber and founding engineer of its Site Reliability Engineering organization. Originally served all of Data -- the better part of a year on production-critical Vertica and data-warehouse reliability (30\% of Uber's hardware footprint), automating provisioning, replication, ETL, and cluster management across Vertica, Hadoop, Redis, and MemSQL. Then, as a lead on the Streaming SRE team, scaled one of the world's largest Kafka deployments of its era to thousands of brokers at >500 GiB/s across multiple regions.
 \item \area{Kafka Infrastructure}{Built an intelligent partition-redistribution engine spanning hundreds of brokers across many clusters, driving load-distribution standard deviation from $\sim$53\% to 0.0001\% of mean, eliminating disk hotspots and self-healing broker failures. Kernel, filesystem, JVM, and broker-source-code tuning delivered over 5$\times$ (500\%) throughput in synthetic benchmarks; in production, p99 produce latency dropped from recurring $\sim$500ms spikes to a stable $\sim$10ms ($\sim$50$\times$) and request-handler utilization fell from $\sim$80\% to $\sim$20\% -- averting a projected nine-figure migration to an all-SSD broker fleet by proving the existing disk stack could meet I/O targets through optimization alone.}
 \item \area{uServer}{Single-handedly built a self-service bare-metal provisioning platform adopted company-wide, managing hundreds of thousands of hosts across Uber's datacenters.}
