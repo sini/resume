@@ -44,7 +44,8 @@
         pname = "jason-bowman-resume";
         version = "1.0.0";
 
-        src = ./.;
+        # ./. would resolve to nix/modules/; the resume sources live at the repo root.
+        src = ../../.;
 
         buildInputs = [ tex ];
 
